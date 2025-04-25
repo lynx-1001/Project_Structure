@@ -3,7 +3,7 @@ import ApiService from "./ApiService";
 
 const UserService = {
     //Get All Users
-  async getAllUsers<T, U extends Record<string, unknown>>(params: U) {
+  async getAllUsers<T>(params:Record<string, unknown>) {
     return ApiService.fetchDataWithAxios<T>({
       url: api_path.user.getAll(),
       method: "GET",
